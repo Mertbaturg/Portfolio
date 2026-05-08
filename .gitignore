@@ -1,0 +1,25 @@
+# Public Portfolio repo policy:
+# Track ONLY README.md + LICENSE on the public remote.
+# Everything else is excluded so nothing leaks via `git add` mistakes.
+
+# Default-deny everything
+*
+
+# Allow only what is meant to be public
+!.gitignore
+!README.md
+!LICENSE
+
+# Never publish source, secrets, internal docs, build output, assets, deps
+node_modules/
+.next/
+out/
+build/
+.env
+.env.*
+.DS_Store
+*.log
+docs/
+memory/
+plans/
+.claude/
